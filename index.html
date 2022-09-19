@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+    <link rel="stylesheet" href="scr/style.css">
+    <title>weather</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/7ebe67a460.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="search_block">
+            <p>Find your city</p>
+            <form>
+                <input type="text" name="text" class="search" placeholder="Write your city">
+                <input type="submit" name="submit" class="submit" value="Search" />
+            </form>
+        </div>
+        <div class="cityChange">
+            <h1 class="city">Kyiv</h1>
+            <button>Weather in <br>my city</button>
+        </div>
+
+        <h2 class="data">18.07.2022</h2>
+        <h2 class="weekDay">monday</h2>
+        <div class="row today_main">
+            <div class="col info">
+                <div class="temp">
+                    <p class="parametr"><i class="fa-solid fa-temperature-full"></i><span id="meaningTemp"></span>
+                    </p>
+                    <p class="C-F cels">℃</p>
+
+                </div>
+                <p class="parametr"><i class="fa-solid fa-cloud-rain"></i><span id="humidity"></span>%</p>
+            </div>
+            <div class="col grafic">
+                <img class="grafic_main" src="img/cloudy.png" alt="cloudy" />
+            </div>
+        </div>
+        <div class="row today">
+            <div class="row morning">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">morning</h5>
+                        <h2 class="temp_big">+18</h2>
+                    </div>
+                    <div class="card_img"><img src="img/cloudy.png" class="card-img-top" alt="..." /></div>
+                </div>
+            </div>
+            <div class="row daytime">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">daytime</h5>
+                        <h2 class="temp_big">+18</h2>
+                    </div>
+                    <div class="card_img"><img src="img/cloudy.png" class="card-img-top" alt="..." /></div>
+                </div>
+            </div>
+            <div class="row evening">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">evening</h5>
+                        <h2 class="temp_big">+18</h2>
+                    </div>
+                    <div class="card_img"><img src="img/cloudy.png" class="card-img-top" alt="..." /></div>
+                </div>
+            </div>
+        </div>
+        <div class="row nextDay">
+            <h3>weather in the coming days</h3>
+            <div class="row nextDay_day">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">19.07.2022</h5>
+                        <h2 class="temp_small">+18</h2>
+                    </div>
+                    <div class="card_img"><img src="img/cloudy.png" class="card-img-top" alt="..." /></div>
+                </div>
+            </div>
+            <div class="row nextDay_day">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">02.07.2022</h5>
+                        <h2 class="temp_small">+18</h2>
+                    </div>
+                    <div class="card_img"><img src="img/cloudy.png" class="card-img-top" alt="..." /></div>
+                </div>
+            </div>
+            <div class="row nextDay_day">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">21.07.2022</h5>
+                        <h2 class="temp_small">+18</h2>
+                    </div>
+                    <div class="card_img"><img src="img/cloudy.png" class="card-img-top" alt="..." /></div>
+                </div>
+            </div>
+            <div class="row nextDay_day">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">22.07.2022</h5>
+                        <h2 class="temp_small">+18</h2>
+                    </div>
+                    <div class="card_img"><img src="img/cloudy.png" class="card-img-top" alt="..." /></div>
+                </div>
+            </div>
+            <div class="row nextDay_day">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">23.07.2022</h5>
+                        <h2 class="temp_small">+18</h2>
+                    </div>
+                    <div class="card_img"><img src="img/cloudy.png" class="card-img-top" alt="..." /></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scr/index_5week.js"></script>
+</body>
+
+</html>
