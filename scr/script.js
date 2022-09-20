@@ -52,14 +52,14 @@ if (minute < 10) {
 
 let apiKey = "8d345000a90a385c939bc9cbb67b4e7e";
 let city = "Kyiv";
-let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apiKey}&units=metric`;
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apiKey}&units=metric`;
 axios.get(apiUrl).then(displayWeather);
 // 5 week choose city
 function chooseCity(event) {
   event.preventDefault();
   let inputCity = document.querySelector(".search");
   let apiKey = "8d345000a90a385c939bc9cbb67b4e7e";
-  let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${inputCity.value}&APPID=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${inputCity.value}&APPID=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeather);
 }
 
@@ -77,7 +77,7 @@ function showLocation(position) {
   let apiKey = "8d345000a90a385c939bc9cbb67b4e7e";
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
-  let apiUrl = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeather);
 }
 function getCurrentPosition() {
