@@ -78,6 +78,8 @@ function displayWeather(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+
+  celsTemp = response.data.main.temp;
 }
 function showLocation(position) {
   let apiKey = "8d345000a90a385c939bc9cbb67b4e7e";
@@ -91,3 +93,26 @@ function getCurrentPosition() {
 }
 let button = document.querySelector("button");
 button.addEventListener("click", getCurrentPosition);
+
+//metric
+
+function displayFahrTemp(event) {
+  event.preventDefault;
+  let tempElement = document.querySelector("#meaningTemp");
+  let fahrTemp = Math.round((celsTemp * 9) / 5 + 32);
+  tempElement.innerHTML = fahrTemp;
+}
+
+function displayCelsTemp(event) {
+  event.preventDefault;
+  let tempElement = document.querySelector("#meaningTemp");
+  tempElement.innerHTML = Math.round(celsTemp);
+}
+
+let celsTemp = null;
+
+let fahrLink = document.querySelector(".farin");
+fahrLink.addEventListener("click", displayFahrTemp);
+
+let celsLink = document.querySelector(".cels");
+celsLink.addEventListener("click", displayCelsTemp);
