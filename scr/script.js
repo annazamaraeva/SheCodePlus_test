@@ -67,11 +67,17 @@ findForm.addEventListener("submit", chooseCity);
 
 // 5 week location
 function displayWeather(response) {
+  console.log(response.data);
   let temperature = Math.round(response.data.main.temp);
   let infoWeather = document.querySelector("h1");
   infoWeather.innerHTML = response.data.name;
   document.querySelector("#meaningTemp").innerHTML = temperature;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  let iconElement = document.querySelector(".grafic_main");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 function showLocation(position) {
   let apiKey = "8d345000a90a385c939bc9cbb67b4e7e";
